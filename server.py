@@ -199,7 +199,6 @@ async def categorize_items(request: CategorizeRequest):
         
         predictions = categorizer.predict_batch(
             request.items,
-            return_probabilities=True
         )
         
         results = []
