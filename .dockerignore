@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+.pytest_cache/
+
+# Data files (these are large and only needed for training)
+data.txt
+data_cleaned.txt
+data_augmented.txt
+
+# Training scripts (not needed in production)
+preprocess_data.py
+augment_translations.py
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Documentation
+README.md
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Kubernetes
+k8s/
+*.yaml
+*.yml
+
+# OS
+.DS_Store
+Thumbs.db
