@@ -12,6 +12,11 @@ jobs:
       - checkout
 
       - run:
+          name: Download trained model
+          command: |
+            curl -L https://recipesage-ml.s3.us-west-2.amazonaws.com/models/grocery-categorizer/ingredient-categorizer-model.tar.gz | tar xz
+
+      - run:
           name: Setup Docker Buildx
           command: |
             docker buildx create --name multiarch --use
