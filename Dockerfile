@@ -12,7 +12,7 @@ COPY requirements-production.txt .
 RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
 
 # Install remaining dependencies
-RUN pip install --no-cache-dir sentence-transformers>=2.2.0 numpy>=1.24.0 fastapi>=0.104.0 uvicorn[standard]>=0.24.0 pydantic>=2.0.0
+RUN pip install --no-cache-dir sentence-transformers>=2.2.0 numpy>=1.24.0 pandas>=1.5.0 scikit-learn>=1.3.0 fastapi>=0.104.0 uvicorn[standard]>=0.24.0 pydantic>=2.0.0
 
 FROM python:3.11-slim
 
