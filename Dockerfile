@@ -7,7 +7,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements-production.txt .
-RUN pip install --no-cache-dir -r requirements-production.txt
+
+# Install PyTorch CPU-only version first (much smaller than CUDA version)
+RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
+# Install remaining dependencies
+RUN pip install --no-cache-dir sentence-transformers>=2.2.0 numpy>=1.24.0 fastapi>=0.104.0 uvicorn[standard]>=0.24.0 pydantic>=2.0.0
 
 FROM python:3.11-slim
 
