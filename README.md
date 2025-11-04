@@ -1,4 +1,4 @@
-# Ingredient Categorizer
+# Grocery Categorizer
 
 A multilingual grocery item categorization API that automatically classifies grocery items into categories using machine learning.
 
